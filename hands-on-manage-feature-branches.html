@@ -1,0 +1,164 @@
+<!DOCTYPE html []>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="MarkdownViewer++" />
+    <title>hands-on-manage-feature-branches.md</title>
+    <style type="text/css">
+            
+/* Avoid page breaks inside the most common attributes, especially for exports (i.e. PDF) */
+td, h1, h2, h3, h4, h5, p, ul, ol, li {
+    page-break-inside: avoid; 
+}
+
+        </style>
+  </head>
+  <body>
+    <h1 id="hands-on-activity-collaborative-feature-development-using-github">Hands-On Activity: Collaborative Feature Development Using GitHub</h1>
+    <p>
+      <strong>Objective:</strong> In pairs, you'll each create and manage your own feature branches within a common GitHub project, focusing on adding or modifying HTML pages. This activity will teach you how to effectively use feature branches in a team setting.</p>
+    <p>
+      <strong>Materials Needed:</strong> A computer with internet access and your preferred Git client (e.g., command line, GitHub Desktop).</p>
+    <p>
+      <strong>Preparation:</strong>
+    </p>
+    <ul>
+      <li>
+        <strong>Form Pairs:</strong> Partner up with a classmate. Although you'll work on individual feature branches, you'll collaborate and review each other's work.</li>
+      <li>
+        <strong>Create an Account on The GitHub Homepage:</strong> If you haven't already, you must create an account on GitHub.</li>
+    </ul>
+    <h2 id="step-by-step-instructions">Step-by-Step Instructions:</h2>
+    <p>In this collaborative exercise, you'll work in pairs to create, manage, and contribute to a shared GitHub repository. The process begins with one member of each pair setting up the repository and ends with both members contributing to it via individual feature branches.</p>
+    <h3 id="step-1-create-a-new-github-repository-performed-by-one-member">Step 1: Create a New GitHub Repository (Performed by One Member)</h3>
+    <p>Only one person in each pair needs to create the new GitHub repository. This simplifies the initial setup and ensures that both members work within the same project framework. The member who creates the repository will then share the repository URL with their partner, allowing both to clone the repository to their local machines.</p>
+    <ol>
+      <li>
+        <strong>Log in</strong> to your GitHub account.</li>
+      <li>Navigate to the <strong>Repositories</strong> tab and click the <strong>New</strong> button.</li>
+      <li>Name your repository something descriptive related to this activity, e.g., <code>web-project-activity</code>.</li>
+      <li>Choose <strong>Public</strong> (so your partner can see it) and initialize the repository with a README file.</li>
+      <li>Click <strong>Create repository</strong>.</li>
+    </ol>
+    <p>After creating the repository on GitHub, the member will add the basic HTML pages (index.html, about.html, contact.html) to the repository. This setup establishes the project structure that both members will contribute to.</p>
+    <h3 id="step-2-clone-your-new-repository">Step 2: Clone Your New Repository</h3>
+    <ul>
+      <li>
+        <strong>Using the Command Line:</strong>
+        <ol>
+          <li>Open your terminal.</li>
+          <li>Use <code>git clone &lt;your-new-repository-url&gt;</code> to clone the repository to your local machine.</li>
+        </ol>
+      </li>
+      <li>
+        <strong>Using GitHub Desktop:</strong>
+        <ol>
+          <li>Open GitHub Desktop.</li>
+          <li>Go to "File" &gt; "Clone repository," select the URL tab, paste your new repository's URL, and choose where to save it locally.</li>
+        </ol>
+      </li>
+    </ul>
+    <h3 id="step-3-add-html-pages-to-your-repository">Step 3: Add HTML Pages to Your Repository</h3>
+    <p>Each student will add simple HTML pages to the repository. Below are templates for three basic HTML pages you can start with. Create each file in your local repository's root directory, add the HTML code provided, and save them with the suggested filenames.</p>
+    <p>
+      <strong>1. Index Page (<code>index.html</code>):</strong>
+    </p>
+    <pre>
+      <code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;My Web Project&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to Our Web Project&lt;/h1&gt;
+    &lt;p&gt;This is a collaborative project by [Your Names].&lt;/p&gt;
+    &lt;a href="about.html"&gt;About Us&lt;/a&gt; | &lt;a href="contact.html"&gt;Contact Us&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+    <p>
+      <strong>2. About Page (<code>about.html</code>):</strong>
+    </p>
+    <pre>
+      <code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;About Us&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;About Us&lt;/h1&gt;
+    &lt;p&gt;We are students learning about web development and Git.&lt;/p&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt; | &lt;a href="contact.html"&gt;Contact Us&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+    <p>
+      <strong>3. Contact Page (<code>contact.html</code>):</strong>
+    </p>
+    <pre>
+      <code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Contact Us&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Contact Us&lt;/h1&gt;
+    &lt;p&gt;Email us at: student@example.com&lt;/p&gt;
+    &lt;a href="index.html"&gt;Home&lt;/a&gt; | &lt;a href="about.html"&gt;About Us&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+    </pre>
+    <h3 id="step-4-create-your-feature-branch">Step 4: Create Your Feature Branch</h3>
+    <p>Each of you will create a branch for your specific feature.</p>
+    <ul>
+      <li>
+        <strong>Command Line:</strong> Run <code>git checkout -b &lt;your-feature-branch&gt;</code> in your project directory.</li>
+      <li>
+        <strong>GitHub Desktop:</strong> Click on the "Current Branch" dropdown, then "New Branch" and name your branch.</li>
+    </ul>
+    <h3 id="step-5-add-or-modify-html-pages">Step 5: Add or Modify HTML Pages</h3>
+    <p>On your branch, add a new HTML page or update an existing one. Ensure your HTML code is correct and check how it looks in a browser.</p>
+    <ul>
+      <li>Example: If you're adding a "Contact Us" page, create a new HTML file named <code>contact.html</code> and write your HTML code.</li>
+    </ul>
+    <h3 id="step-6-commit-your-changes">Step 6: Commit Your Changes</h3>
+    <p>Save your work in Git by committing your changes.</p>
+    <ul>
+      <li>
+        <strong>Command Line:</strong>
+        <ol>
+          <li>
+            <code>git add .</code> to stage all your changes.</li>
+          <li>
+            <code>git commit -m "Your descriptive commit message"</code> to commit.</li>
+        </ol>
+      </li>
+      <li>
+        <strong>GitHub Desktop:</strong>
+        <ol>
+          <li>Check the changes you wish to stage.</li>
+          <li>Write a commit message describing your changes and click "Commit".</li>
+        </ol>
+      </li>
+    </ul>
+    <h3 id="step-7-push-your-branch-to-github">Step 7: Push Your Branch to GitHub</h3>
+    <p>Share your work by pushing your branch to the remote repository.</p>
+    <ul>
+      <li>
+        <strong>Command Line:</strong> Run <code>git push -u origin &lt;your-feature-branch&gt;</code>.</li>
+      <li>
+        <strong>GitHub Desktop:</strong> Click "Publish branch" for the first push or "Push origin" for subsequent pushes.</li>
+    </ul>
+    <h3 id="step-8-review-your-partners-work">Step 8: Review Your Partner's Work</h3>
+    <p>After both of you have pushed your branches, take some time to review each other's changes.</p>
+    <ul>
+      <li>Navigate to the GitHub repository online.</li>
+      <li>Switch between branches to view and discuss the changes.</li>
+    </ul>
+    <h2 id="conclusion">Conclusion</h2>
+    <p>Congratulations! You've successfully participated in a collaborative coding exercise using Git and GitHub. By creating feature branches, adding new content, and reviewing each other's work, you've practiced essential skills for team-based software development. This experience will serve as a foundation as you continue to explore more advanced Git operations and workflows.</p>
+  </body>
+</html>
